@@ -17,7 +17,7 @@ MonoBehaviour:
     AppIdFusion: 
     AppIdChat: 
     AppIdVoice: 
-    AppVersion: 
+    AppVersion: 1
     UseNameServer: 1
     FixedRegion: eu
     Server: 
@@ -30,7 +30,7 @@ MonoBehaviour:
     NetworkLogging: 1
   DevRegion: 
   PunLogging: 0
-  EnableSupportLogger: 0
+  EnableSupportLogger: 1
   RunInBackground: 1
   StartInOfflineMode: 0
   RpcList:
@@ -41,6 +41,16 @@ MonoBehaviour:
   - RespawnSpaceship
   - RpcFireBullet
   - DestroyObject
+  - RpcShoot
+  - DealDamage
+  - TakeDamage
+  - CoinCollect
+  - RPC_TakeDamage
+  - RPC_CoinCollect
+  - RPC_PlayerDeath
+  - RPC_Shoot
+  - RPC_AliveCount
+  - RPC_AliveCountCheck
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 0

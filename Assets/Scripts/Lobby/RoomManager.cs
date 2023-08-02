@@ -1,22 +1,22 @@
-using UnityEngine;
 using Photon.Pun;
 using System.IO;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class RoomManager : MonoBehaviourPunCallbacks
 {
-    public static RoomManager instance;
+    public static RoomManager Instance;
 
     void Awake()
     {
-        if (instance)
+        if (Instance)
         {
             Destroy(gameObject);
             return;
         }
 
         DontDestroyOnLoad(gameObject);
-        instance = this;
+        Instance = this;
     }
 
     public override void OnEnable()
@@ -36,6 +36,7 @@ public class RoomManager : MonoBehaviourPunCallbacks
         if(scene.buildIndex == 1) 
         {
             PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "PlayerManager"), Vector3.zero, Quaternion.identity);
-        }
+            Destroy(gameObject);
+        }        
     }
 }

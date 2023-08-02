@@ -1,9 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
+using Photon.Pun;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HealthMeter : MonoBehaviour
+public class HealthMeter : MonoBehaviourPun
 {
     [SerializeField] private Image _healthBar;
 
